@@ -13,7 +13,7 @@ describe FaqModule::CreateService do
       @createService = FaqModule::CreateService.new({"question-original" => @question, "answer-original" => @answer})
 
       response = @createService.call()
-      expect(response).to match("Hashtag Obrigatória")
+      expect(response).to match("Hashtag obrigatória")
     end
 
     it "With valid params, receive success message" do

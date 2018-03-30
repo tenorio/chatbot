@@ -1,4 +1,4 @@
-require_relative './../spec_helper.rb'
+require_relative '../../spec_helper.rb'
 
 describe InterpretService do
   before :each do
@@ -68,7 +68,7 @@ describe InterpretService do
 
     it "Without hashtag params, receive a error" do
       response = InterpretService.call('create', {"question-original" => @question, "answer-original" => @answer})
-      expect(response).to match("Hashtag Obrigatória")
+      expect(response).to match("Hashtag obrigatória")
     end
 
     it "With valid params, receive success message" do
@@ -101,7 +101,7 @@ describe InterpretService do
 
     it "With invalid ID, receive error message" do
       response = InterpretService.call('remove', {"id" => rand(1..9999)})
-      expect(response).to match("Questão inválida, verifique o Id")
+      expect(response).to match("Questão inválida, verifique o ID")
     end
   end
 end

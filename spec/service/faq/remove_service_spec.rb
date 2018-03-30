@@ -18,7 +18,7 @@ describe FaqModule::RemoveService do
       @removeService = FaqModule::RemoveService.new({"id" => rand(1..9999)})
       response = @removeService.call()
 
-      expect(response).to match("Questão inválida, verifique o Id")
+      expect(response).to match("Questão inválida, verifique o ID")
     end
 
     it "With valid ID, remove Faq from database" do
